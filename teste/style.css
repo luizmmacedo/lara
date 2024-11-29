@@ -1,0 +1,341 @@
+/* Resetando margens e padding em todo o site */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do site */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #34495e; /* Cor de texto padrão */
+    padding-top: 80px; /* Ajuste para não cobrir o conteúdo abaixo do cabeçalho fixo */
+}
+
+/* Cabeçalho fixo no topo */
+.header {
+    background: linear-gradient(45deg, #2c3e50, #16a085); /* Gradiente no cabeçalho */
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Garante que o texto esteja centralizado */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Logo centralizado */
+.header .logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    flex: 1; /* Isso faz a logo ocupar todo o espaço disponível */
+}
+
+/* Menu fixo no PC */
+.nav-bar {
+    background-color: #2c3e50;
+    position: fixed;
+    top: 80px; /* Ajuste para não cobrir o cabeçalho */
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave no menu */
+}
+
+/* Evitar que o menu no desktop crie uma linha branca */
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Ajuste os elementos para ficarem espaçados corretamente */
+.nav-bar ul li {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.nav-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 30px 0;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito de hover no menu */
+.nav-bar ul li a:hover {
+    background-color: #1abc9c;
+    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+}
+
+/* Estilo para quando o item do menu está ativo */
+.nav-bar ul li a.active {
+    background-color: #1abc9c;
+}
+
+/* Evitar que o menu no desktop crie uma linha branca */
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Ajuste os elementos para ficarem espaçados corretamente */
+.nav-bar ul li {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.nav-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 30px 0;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito de hover no menu */
+.nav-bar ul li a:hover {
+    background-color: #1abc9c;
+    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+}
+
+
+/* Estilo para quando o item do menu está ativo */
+.nav-bar ul li a.active {
+    background-color: #1abc9c;
+ 
+}
+
+/* Estilo para a imagem da van com efeito de aparecer suavemente */
+.van-img {
+    width: 100%;  /* A imagem ocupará 50% da largura da tela */
+    /*height: 900px;  /* A altura será ajustada proporcionalmente */
+    transform: scale(1.1);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+
+.van-img.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Seção de colégios */
+#colegios {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.colegios-content h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.collegio-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.collegio-list li {
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+/* Links de colégios */
+.colegios-content ul li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.colegios-content ul li a:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+/* Seção de bairros */
+#bairros {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.bairros-content h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.bairros-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bairros-list li {
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+/* Links de bairros */
+.bairros-content ul li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.bairros-content ul li a:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+/* Seção de "Nossa História" - padronizada com a seção de colégios */
+#historia {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.historia-content h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.historia-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.historia-list li {
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+/* Links de "Nossa História" */
+.historia-content ul li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.historia-content ul li a:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+/* Espaçamento inferior para o conteúdo principal */
+body {
+    padding-bottom: 35px; /* Ajuste conforme necessário para garantir que o conteúdo não seja coberto pelo footer */
+}
+
+/* Seção de contato no final da página */
+#contato-final {
+    background-color: #34495e; /* Cor de fundo */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+    width: 100%;
+}
+
+#contato-final .contato-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+#contato-final .whatsapp-link {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#contato-final .telefone {
+    display: flex;
+    align-items: center;
+}
+
+#contato-final .fa-phone,
+#contato-final .fab {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.separator {
+    margin: 0 10px;
+    color: white;
+}
+
+/* Footer fixo na parte inferior */
+.footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Efeito de hover no menu */
+.contato-content:hover {
+    background-color: #34495e;
+    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+}
+
+/* Corrige a rolagem suave para o conteúdo ficar visível abaixo do menu fixo */
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar no link */
+}
+
+body {
+    padding-top: 60px; /* Ajuste para evitar que o conteúdo fique atrás do menu fixo */
+}
+
+/* Adiciona um espaçamento extra para que o conteúdo não fique oculto sob o menu */
+section {
+    padding-top: 20px;
+}
+
+/* Ajusta o padding superior das seções quando o link é clicado */
+#colegios, #bairros, #historia {
+    scroll-margin-top: 50px; /* Compensa a altura do menu fixo */
+}
